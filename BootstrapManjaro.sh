@@ -31,8 +31,22 @@ function setup_vim{
     remove_artifacts
 }
 
+function install_compilers{
+    sudo pacman -S ocaml
+    sudo pacman -S rlwrap
+    sudo pacman -S scala
+}
+
+function remap_pageup_and_pagedown{
+    echo 'open /etc/inputrc'
+    echo '"\e[5~": history-search-backward'
+    echo '"\e[6~": history-search-forward'
+}
+
+# update_software
+# install_compilers
 # set_ssh 
 # install_new_software
-# install_new_software
 # setup_vim
-
+# install_compilers
+# remap_pageup_and_pagedown
